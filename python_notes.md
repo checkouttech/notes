@@ -1,8 +1,20 @@
 
+Install Python ( using brew ) 
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+ 
+   brew reinstall python
+
+ 
+
+
+pip install --upgrade setuptools
+
+
 
 Install virtual env
   pip3 install virtualenv
-
 
 
 Create Virtual Env
