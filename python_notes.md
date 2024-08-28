@@ -58,5 +58,6 @@ Strict mypy
 python -m mypy --strict headlines.py
 
 
+ python3 -m  pip install mypy pytype pylint pyright flake8  pylance black pyflakes
 
 
