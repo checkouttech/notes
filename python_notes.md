@@ -44,8 +44,10 @@ Install Packages
    python -m mypy --strict  [PY-SCRIPT]  
    python3 -m ruff check  [PY-SCRIPT]  
 
-*Code Lint*
-   python -m ruff format  [PY-SCRIPT]  
+*Code Linter and Formatters*
+   python3 -m ruff format [PY-SCRIPT] 
+   python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
+
       
    Other options 
       black - Proper formatting
@@ -53,3 +55,28 @@ Install Packages
 
 
  
+ 
+
+ 
+
+
+ 
+
+
+Type checking --- 
+ python3 -m pyright    [PY-SCRIPT]  
+ python3 -m pylint    [PY-SCRIPT]  
+ python3 -m pyflakes  [PY-SCRIPT]  
+
+
+
+
+Type Checkers
+mypy, the reference implementation for type checkers.
+pyre, a type checker written in OCaml and optimized for performance.
+pyright, a type checker that emphasizes speed.
+pytype, a type checker that checks and infers types for unannotated code.
+
+
+
+
