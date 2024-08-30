@@ -12,12 +12,7 @@ Install tools
    python3 -m pip install --upgrade pip
 
 
- 
-
-
 pip install --upgrade setuptools
-
-
 
 Install virtual env
   pip3 install virtualenv
@@ -40,24 +35,21 @@ Install Packages
   python3 -m pip install "package-name"
   pip3 install "package-name"  # this one works for sure 
 
-
-
-Run package
-
-python -m mypy python/typeCheck.py
-
-Code guidelines
-
-black - Proper formatting
-mypy -
-python -m flake8 headlines.py
-
-
-Strict mypy 
-
-python -m mypy --strict headlines.py
-
-
  python3 -m  pip install mypy pytype pylint pyright flake8  pylance black pyflakes
 
 
+
+*Type Checking*
+
+   python -m mypy --strict  [PY-SCRIPT]  
+   python3 -m ruff check  [PY-SCRIPT]  
+
+*Code Lint*
+   python -m ruff format  [PY-SCRIPT]  
+      
+   Other options 
+      black - Proper formatting
+      flake8  
+
+
+ 
