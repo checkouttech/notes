@@ -1,10 +1,62 @@
 
-Install Python ( using brew ) 
+Install Python:
+    uv : 
+    
+        To list all instances of python
+            uv python list
+            uv python list --only-installed
 
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+        To install a Python version at a specific version:
+            uv python install 3.12.3
+
+
+    Brew :
  
-   brew reinstall python
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+ 
+        brew reinstall python
+
+       
+
+Create Virtual Env:
+
+    uv : 
+        
+        To create a specific version of Venv
+        uv venv  --python 3.12.5   virutalEnvs/uvExample3.12.5
+
+    classic :
+
+        python3 -m venv virutalEnvs/practice
+
+
+Activate virutal env :
+
+  source virutalEnvs/practice/bin/activate
+
+
+Install Packages
+
+    uv pip install <module >
+
+    python3 -m pip install "package-name"
+    pip3 install "package-name"  # this one works for sure 
+
+
+
+
+
+
+To install using .toml
+    uv pip install -r pyproject.toml
+
+To create project
+    uv init —name uv-tutorial
+
+
+
+
 
 
 Install tools 
@@ -17,25 +69,12 @@ pip install --upgrade setuptools
 Install virtual env
   pip3 install virtualenv
 
-
-Create Virtual Env
-  python3 -m venv virutalEnvs/practice
-
-Activate virtual env .
-  source virutalEnvs/practice/bin/activate
-
 Update pip 
   python3 -m pip install --upgrade pip
   python -m pip install pip==21.3.1  # if a particular version needs to be installed 
 
 Check pip version 
   python3 -m pip --version
-
-Install Packages
-  python3 -m pip install "package-name"
-  pip3 install "package-name"  # this one works for sure 
-
- python3 -m  pip install mypy pytype pylint pyright flake8  pylance black pyflakes
 
 
 
@@ -46,6 +85,8 @@ Install Packages
 
 *Code Linter and Formatters*
    python3 -m ruff format [PY-SCRIPT] 
+   python3 -m ruff format --line-length 200 [PY-SCRIPT]
+
    python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
 
       
