@@ -1,5 +1,6 @@
 
 Install Python:
+
     uv : 
     
         To list all instances of python
@@ -18,7 +19,6 @@ Install Python:
         brew reinstall python
 
        
-
 Create Virtual Env:
 
     uv : 
@@ -31,9 +31,9 @@ Create Virtual Env:
         python3 -m venv virutalEnvs/practice
 
 
-Activate virutal env :
+Activate virutal env:
 
-  source virutalEnvs/practice/bin/activate
+    source virutalEnvs/practice/bin/activate
 
 
 Install Packages
@@ -42,6 +42,23 @@ Install Packages
 
     python3 -m pip install "package-name"
     pip3 install "package-name"  # this one works for sure 
+
+
+
+Type Checking:
+
+    python -m mypy --strict  [PY-SCRIPT]  
+
+    python3 -m ruff check  [PY-SCRIPT]  
+
+
+Code Linter and Formatters:
+
+    python3 -m ruff format [PY-SCRIPT] 
+    
+    python3 -m ruff format --line-length 200 [PY-SCRIPT]
+
+    python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
 
 
 
@@ -75,19 +92,6 @@ Update pip
 
 Check pip version 
   python3 -m pip --version
-
-
-
-*Type Checking*
-
-   python -m mypy --strict  [PY-SCRIPT]  
-   python3 -m ruff check  [PY-SCRIPT]  
-
-*Code Linter and Formatters*
-   python3 -m ruff format [PY-SCRIPT] 
-   python3 -m ruff format --line-length 200 [PY-SCRIPT]
-
-   python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
 
       
    Other options 
