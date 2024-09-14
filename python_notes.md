@@ -1,3 +1,12 @@
+Install uv:
+
+    Curl:
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+
+    pip: 
+    pip install uv
+
+
 
 Install Python:
 
