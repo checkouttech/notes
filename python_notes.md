@@ -43,6 +43,22 @@ Install Packages
     python3 -m pip install "package-name"
     pip3 install "package-name"  # this one works for sure 
 
+    # To install modules from pyproject 
+    uv pip install -r pyproject.toml
+
+
+Get list of installed Packages
+
+    pip freeze 
+    pip list --format <format>   ( columns, freeze, or json ) 
+         
+    # To generate requirements.txt  from a pyproject.toml 
+    uv pip compile pyproject.toml -o requirements.txt
+
+    # To sync an existing environment with a requirements.txt or pyproject file :
+    uv pip sync pyproject.toml
+    uv pip sync requirements.txt
+
 
 
 Type Checking:
@@ -64,9 +80,7 @@ Code Linter and Formatters:
 
 
 
-
-To install using .toml
-    uv pip install -r pyproject.toml
+ 
 
 To create project
     uv init —name uv-tutorial
