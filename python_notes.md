@@ -11,6 +11,8 @@ Install uv:
 Install Python:
 
     uv : 
+
+        Download from python.org and install manually 
     
         To list all instances of python
             uv python list
@@ -26,6 +28,11 @@ Install Python:
         export PATH="/usr/local/opt/python/libexec/bin:$PATH"
  
         brew reinstall python
+
+
+Install Virtual Env:
+
+
 
        
 Create Virtual Env:
@@ -45,21 +52,33 @@ Activate virutal env:
     source virutalEnvs/practice/bin/activate
 
 
+
+
+
+
+
 Install Packages
 
-    uv pip install <module >
+    uv : 
+        uv pip install <module >
 
-    python3 -m pip install "package-name"
-    pip3 install "package-name"  # this one works for sure 
+        # To install modules from pyproject 
+        uv pip install -r pyproject.toml
 
-    # To install modules from pyproject 
-    uv pip install -r pyproject.toml
+        # To install modules from requirement.txt  
+        uv pip install -r requirement.txt    
+
+    classic :
+    
+        python3 -m pip install "package-name"
+        pip3 install "package-name"  # this one works for sure 
+
 
 
 Get list of installed Packages
 
-    pip freeze 
-    pip list --format <format>   ( columns, freeze, or json ) 
+    uv pip freeze 
+    uv pip list --format <format>   ( columns, freeze, or json ) 
          
     # To generate requirements.txt  from a pyproject.toml 
     uv pip compile pyproject.toml -o requirements.txt
@@ -86,12 +105,8 @@ Code Linter and Formatters:
     python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
 
 
-
-
-
- 
-
 To create project
+
     uv init —name uv-tutorial
 
 
@@ -104,10 +119,7 @@ Install tools
    python3 -m pip install --upgrade pip
 
 
-pip install --upgrade setuptools
-
-Install virtual env
-  pip3 install virtualenv
+ 
 
 Update pip 
   python3 -m pip install --upgrade pip
@@ -120,15 +132,6 @@ Check pip version
    Other options 
       black - Proper formatting
       flake8  
-
-
- 
- 
-
- 
-
-
- 
 
 
 Type checking --- 
