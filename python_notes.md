@@ -52,11 +52,6 @@ Activate virutal env:
     source virutalEnvs/practice/bin/activate
 
 
-
-
-
-
-
 Install Packages
 
     uv : 
@@ -119,8 +114,6 @@ Install tools
    python3 -m pip install --upgrade pip
 
 
- 
-
 Update pip 
   python3 -m pip install --upgrade pip
   python -m pip install pip==21.3.1  # if a particular version needs to be installed 
@@ -149,5 +142,9 @@ pyright, a type checker that emphasizes speed.
 pytype, a type checker that checks and infers types for unannotated code.
 
 
+
+
+Install virtual env
+  pip3 install virtualenv
 
 
