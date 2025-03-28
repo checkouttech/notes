@@ -30,10 +30,6 @@ Install Python:
         brew reinstall python
 
 
-Install Virtual Env:
-
-
-
        
 Create Virtual Env:
 
@@ -55,7 +51,12 @@ Activate virutal env:
 Install Packages
 
     uv : 
-        uv pip install <module >
+        # install packages
+        uv pip install <module>
+        uv add django requests "pandas>=2.3"
+
+        # To remove a package 
+        uv remove django
 
         # To install modules from pyproject 
         uv pip install -r pyproject.toml
@@ -82,6 +83,8 @@ Get list of installed Packages
     uv pip sync pyproject.toml
     uv pip sync requirements.txt
 
+    ## see pkg dependency tree
+    uv tree
 
 
 Type Checking:
@@ -105,7 +108,11 @@ To create project
     uv init —name uv-tutorial
 
 
-
+Start a new project and pin it to Python 3.12
+    uv init myproject
+    uv python pin 3.12
+    uv add django
+    uv run main.py (will automatically install py3.12 and django into venv)
 
 
 
