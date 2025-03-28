@@ -6,7 +6,8 @@ Install uv:
     pip: 
     pip install uv
 
-
+    # Update uv to latest
+    uv self update 
 
 Install Python:
 
@@ -103,30 +104,39 @@ Code Linter and Formatters:
     python -m ruff format --diff [PY-SCRIPT]    # to auto fix 
 
 
-To create project
+To create project:
 
     uv init —name uv-tutorial
 
 
-Start a new project and pin it to Python 3.12
+Run a python script directly w/o starting venv
+
+    uv run main.py
+
+
+
+Start a new project and pin it to Python 3.12:
+
     uv init myproject
     uv python pin 3.12
     uv add django
     uv run main.py (will automatically install py3.12 and django into venv)
 
 
+Install tools: 
 
-Install tools 
-   python3 -m pip install --upgrade setuptools
-   python3 -m pip install --upgrade pip
+    python3 -m pip install --upgrade setuptools
+    python3 -m pip install --upgrade pip
 
 
-Update pip 
-  python3 -m pip install --upgrade pip
-  python -m pip install pip==21.3.1  # if a particular version needs to be installed 
+Update pip:
+
+    python3 -m pip install --upgrade pip
+    python -m pip install pip==21.3.1  # if a particular version needs to be installed 
 
 Check pip version 
-  python3 -m pip --version
+
+    python3 -m pip --version
 
       
    Other options 
@@ -154,4 +164,14 @@ pytype, a type checker that checks and infers types for unannotated code.
 Install virtual env
   pip3 install virtualenv
 
+
+
+run a cli tool like Ruff:
+
+    uv run tool ruff (or uvx ruff)
+
+
+To update dependencies in the lock file:
+
+    uv lock —upgrade
 
