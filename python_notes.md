@@ -64,6 +64,11 @@ Install Packages
 
         # To install modules from requirement.txt  
         uv pip install -r requirement.txt    
+ 
+        # install packages using a particular python version 
+        ????
+        #uv pip install -v -v package-name  -i [ARTIFACTORY-URL]
+
 
     classic :
     
